@@ -1,0 +1,19 @@
+N =   program, assignmentstmt, expression,term, factor, constant,condition, relation, ifstmt, whilestmt,forstmt, simplestatement, statement, statementlist
+E =  integer, character, string,==,<,>, <=, =>, and, or, begin, end, :, ;, :, +, *, /, -, <-, (, ), read,show, if, while, for, else
+S = program
+P =
+declaration -> type$id$;
+assignmentstmt -> id$<-$expression$;
+expression -> expression$+$term |expression$-$term|term
+term  ->  term$*$factor | term$/$factor |factor
+factor ->  ($expression$)| id | constant
+constant -> intconst|stringconst
+condition -> ($expression$relation$expression$) | not$($expression$)
+relation ->  ==|<|>|=>|<=|
+ifstmt -> if$condition$:$statementlist$end_if|if$condition$:$statementlist$else$statementlist
+whilestmt -> while$condition$:$statementlist
+forstmt -> for$assignmentstmt$,$id$,$constant$:$statementlist
+simplestatement -> declaration |iostmt |assignmentstmt
+statement -> simplestatement|ifstmt|whilestmt|forstmt
+statementlist -> statement |statement$statementlist
+program -> begin$:$statementlist
