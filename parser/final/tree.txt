@@ -1,0 +1,42 @@
+
+|   Index | Value                 |   Parent |   Left Sibling |
+|---------+-----------------------+----------+----------------|
+|       0 | program               |       -1 |             -1 |
+|       1 | BEGIN                 |        0 |              2 |
+|       2 | statement_list        |        0 |             14 |
+|       3 | statement             |        2 |              9 |
+|       4 | declaration_statement |        3 |             -1 |
+|       5 | simple_type           |        4 |              7 |
+|       6 | integer               |        5 |             -1 |
+|       7 | identifier            |        4 |              8 |
+|       8 | ;                     |        4 |             -1 |
+|       9 | statement_list        |        2 |             -1 |
+|      10 | statement             |        9 |             15 |
+|      11 | iostmt                |       10 |             -1 |
+|      12 | read                  |       11 |             13 |
+|      13 | identifier            |       11 |             14 |
+|      14 | ;                     |        0 |             -1 |
+|      15 | statement_list        |        9 |             -1 |
+|      16 | statement             |       15 |             -1 |
+|      17 | if_statement          |       16 |             -1 |
+|      18 | if                    |       17 |             19 |
+|      19 | condition             |       17 |             29 |
+|      20 | expression            |       19 |             24 |
+|      21 | term                  |       20 |             -1 |
+|      22 | factor                |       21 |             -1 |
+|      23 | identifier            |       22 |             -1 |
+|      24 | relation              |       19 |             26 |
+|      25 | >                     |       24 |             -1 |
+|      26 | expression            |       19 |             -1 |
+|      27 | term                  |       26 |             -1 |
+|      28 | factor                |       27 |             -1 |
+|      29 | constant              |       17 |             30 |
+|      30 | {                     |       17 |             31 |
+|      31 | statement_list        |       17 |             -1 |
+|      32 | statement             |       31 |             -1 |
+|      33 | iostmt                |       32 |             -1 |
+|      34 | write                 |       33 |             35 |
+|      35 | identifier            |       33 |             36 |
+|      36 | ;                     |       33 |             -1 |
+|      37 | }                     |       -1 |             -1 |
+|      38 | END                   |       -1 |             -1 |

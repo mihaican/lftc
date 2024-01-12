@@ -1,0 +1,203 @@
+
+--------------
+State: q Index: 0
+Working stack: []
+Input stack: ['S']
+expand
+
+--------------
+State: q Index: 0
+Working stack: [('S', 1)]
+Input stack: ['a', 'A']
+advance
+
+--------------
+State: q Index: 1
+Working stack: [('S', 1), 'a']
+Input stack: ['A']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('S', 1), 'a', ('A', 2)]
+Input stack: ['a', 'A']
+advance
+
+--------------
+State: q Index: 2
+Working stack: [('S', 1), 'a', ('A', 2), 'a']
+Input stack: ['A']
+expand
+
+--------------
+State: q Index: 2
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 2)]
+Input stack: ['a', 'A']
+momentary insuccess
+
+--------------
+State: b Index: 2
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 2)]
+Input stack: ['a', 'A']
+another try
+
+--------------
+State: q Index: 2
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3)]
+Input stack: ['b', 'A']
+advance
+
+--------------
+State: q Index: 3
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b']
+Input stack: ['A']
+expand
+
+--------------
+State: q Index: 3
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2)]
+Input stack: ['a', 'A']
+advance
+
+--------------
+State: q Index: 4
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a']
+Input stack: ['A']
+expand
+
+--------------
+State: q Index: 4
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 2)]
+Input stack: ['a', 'A']
+momentary insuccess
+
+--------------
+State: b Index: 4
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 2)]
+Input stack: ['a', 'A']
+another try
+
+--------------
+State: q Index: 4
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3)]
+Input stack: ['b', 'A']
+advance
+
+--------------
+State: q Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b']
+Input stack: ['A']
+expand
+
+--------------
+State: q Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 2)]
+Input stack: ['a', 'A']
+momentary insuccess
+
+--------------
+State: b Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 2)]
+Input stack: ['a', 'A']
+another try
+
+--------------
+State: q Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3)]
+Input stack: ['b', 'A']
+advance
+
+--------------
+State: q Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b']
+Input stack: ['A']
+expand
+
+--------------
+State: q Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 2)]
+Input stack: ['a', 'A']
+momentary insuccess
+
+--------------
+State: b Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 2)]
+Input stack: ['a', 'A']
+another try
+
+--------------
+State: q Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 3)]
+Input stack: ['b', 'A']
+momentary insuccess
+
+--------------
+State: b Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 3)]
+Input stack: ['b', 'A']
+another try
+
+--------------
+State: q Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 4)]
+Input stack: ['a']
+momentary insuccess
+
+--------------
+State: b Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 4)]
+Input stack: ['a']
+another try
+
+--------------
+State: q Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 5)]
+Input stack: ['b']
+momentary insuccess
+
+--------------
+State: b Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b', ('A', 5)]
+Input stack: ['b']
+another try
+
+production : ('b', 5)**
+
+last length : 1
+
+--------------
+State: b Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3), 'b']
+Input stack: ['A']
+back
+
+--------------
+State: b Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 3)]
+Input stack: ['b', 'A']
+another try
+
+--------------
+State: q Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 4)]
+Input stack: ['a']
+momentary insuccess
+
+--------------
+State: b Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 4)]
+Input stack: ['a']
+another try
+
+--------------
+State: q Index: 5
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 5)]
+Input stack: ['b']
+advance
+
+--------------
+State: q Index: 6
+Working stack: [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 5), 'b']
+Input stack: []
+success
+Sequence [('S', 1), 'a', ('A', 2), 'a', ('A', 3), 'b', ('A', 2), 'a', ('A', 3), 'b', ('A', 5), 'b'] is accepted!

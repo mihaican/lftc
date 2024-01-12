@@ -1,0 +1,20 @@
+N = program, statement_list, statement, declaration_statement ,assignment_statement,if_statement,while_statement ,for_statement ,iostmt,simple_type ,expression ,term ,factor ,for_header ,condition ,relation
+E = +, -, *, /, %, ==, >, <, <>, =, (, ), [, ], { }, ;, constant, BEGIN, END, if, else, for, while, integer, char, string, read, write, identifier
+S = program
+P =
+program -> BEGIN$statement_list$END
+statement_list ->  statement | statement$statement_list
+statement -> declaration_statement | iostmt | if_statement | assignment_statement | while_statement | for_statement
+declaration_statement -> simple_type$identifier$;
+simple_type -> integer | char | string
+expression -> term | expression$+$term | expression$-$term
+term ->  factor | term$*$factor | term$/$factor
+factor -> identifier | constant | ($expression$)
+iostmt -> read$identifier$; | write$identifier$; | write$constant$;
+assignment_statement -> identifier$=$expression$;
+if_statement -> if$condition${$statement_list$} |if$condition${$statement_list$}$else${$statement_list$}
+while_statement -> while$condition${$statement_list$}
+for_statement -> for$for_header${$statement_list$}
+for_header -> integer$assignment_statement$;$condition$;$assignment_statement
+condition -> expression$relation$expression
+relation -> <|>|==|<>

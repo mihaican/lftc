@@ -1,0 +1,602 @@
+
+--------------
+State: q Index: 0
+Working stack: []
+Input stack: ['program']
+expand
+
+--------------
+State: q Index: 0
+Working stack: [('program', 1)]
+Input stack: ['BEGIN', 'statement_list', 'END']
+advance
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN']
+Input stack: ['statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2)]
+Input stack: ['statement', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4)]
+Input stack: ['declaration_statement', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10)]
+Input stack: ['simple_type', 'identifier', ';', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11)]
+Input stack: ['integer', 'identifier', ';', 'END']
+advance
+
+--------------
+State: q Index: 2
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer']
+Input stack: ['identifier', ';', 'END']
+advance
+
+--------------
+State: q Index: 3
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer', 'identifier']
+Input stack: [';', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 3
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer', 'identifier']
+Input stack: [';', 'END']
+back
+
+--------------
+State: b Index: 2
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer']
+Input stack: ['identifier', ';', 'END']
+back
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11)]
+Input stack: ['integer', 'identifier', ';', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 12)]
+Input stack: ['char', 'identifier', ';', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 12)]
+Input stack: ['char', 'identifier', ';', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 13)]
+Input stack: ['string', 'identifier', ';', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10), ('simple_type', 13)]
+Input stack: ['string', 'identifier', ';', 'END']
+another try
+
+production : ('string', 13)**
+
+last length : 1
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4), ('declaration_statement', 10)]
+Input stack: ['simple_type', 'identifier', ';', 'END']
+another try
+
+production : ('simple_type$identifier$;', 10)**
+
+last length : 3
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 4)]
+Input stack: ['declaration_statement', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5)]
+Input stack: ['iostmt', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5), ('iostmt', 23)]
+Input stack: ['read', 'identifier', ';', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5), ('iostmt', 23)]
+Input stack: ['read', 'identifier', ';', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5), ('iostmt', 24)]
+Input stack: ['write', 'identifier', ';', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5), ('iostmt', 24)]
+Input stack: ['write', 'identifier', ';', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5), ('iostmt', 25)]
+Input stack: ['write', 'constant', ';', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5), ('iostmt', 25)]
+Input stack: ['write', 'constant', ';', 'END']
+another try
+
+production : ('write$constant$;', 25)**
+
+last length : 3
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 5)]
+Input stack: ['iostmt', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 6)]
+Input stack: ['if_statement', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 6), ('if_statement', 27)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 6), ('if_statement', 27)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 6), ('if_statement', 28)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'else', '{', 'statement_list', '}', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 6), ('if_statement', 28)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'else', '{', 'statement_list', '}', 'END']
+another try
+
+production : ('if$condition${$statement_list$}$else${$statement_list$}', 28)**
+
+last length : 9
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 6)]
+Input stack: ['if_statement', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 7)]
+Input stack: ['assignment_statement', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 7), ('assignment_statement', 26)]
+Input stack: ['identifier', '=', 'expression', ';', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 7), ('assignment_statement', 26)]
+Input stack: ['identifier', '=', 'expression', ';', 'END']
+another try
+
+production : ('identifier$=$expression$;', 26)**
+
+last length : 4
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 7)]
+Input stack: ['assignment_statement', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 8)]
+Input stack: ['while_statement', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 8), ('while_statement', 29)]
+Input stack: ['while', 'condition', '{', 'statement_list', '}', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 8), ('while_statement', 29)]
+Input stack: ['while', 'condition', '{', 'statement_list', '}', 'END']
+another try
+
+production : ('while$condition${$statement_list$}', 29)**
+
+last length : 5
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 8)]
+Input stack: ['while_statement', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 9)]
+Input stack: ['for_statement', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 9), ('for_statement', 30)]
+Input stack: ['for', 'for_header', '{', 'statement_list', '}', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 9), ('for_statement', 30)]
+Input stack: ['for', 'for_header', '{', 'statement_list', '}', 'END']
+another try
+
+production : ('for$for_header${$statement_list$}', 30)**
+
+last length : 5
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2), ('statement', 9)]
+Input stack: ['for_statement', 'END']
+another try
+
+production : ('for_statement', 9)**
+
+last length : 1
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 2)]
+Input stack: ['statement', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3)]
+Input stack: ['statement', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4)]
+Input stack: ['declaration_statement', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10)]
+Input stack: ['simple_type', 'identifier', ';', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11)]
+Input stack: ['integer', 'identifier', ';', 'statement_list', 'END']
+advance
+
+--------------
+State: q Index: 2
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer']
+Input stack: ['identifier', ';', 'statement_list', 'END']
+advance
+
+--------------
+State: q Index: 3
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer', 'identifier']
+Input stack: [';', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 3
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer', 'identifier']
+Input stack: [';', 'statement_list', 'END']
+back
+
+--------------
+State: b Index: 2
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11), 'integer']
+Input stack: ['identifier', ';', 'statement_list', 'END']
+back
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 11)]
+Input stack: ['integer', 'identifier', ';', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 12)]
+Input stack: ['char', 'identifier', ';', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 12)]
+Input stack: ['char', 'identifier', ';', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 13)]
+Input stack: ['string', 'identifier', ';', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10), ('simple_type', 13)]
+Input stack: ['string', 'identifier', ';', 'statement_list', 'END']
+another try
+
+production : ('string', 13)**
+
+last length : 1
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4), ('declaration_statement', 10)]
+Input stack: ['simple_type', 'identifier', ';', 'statement_list', 'END']
+another try
+
+production : ('simple_type$identifier$;', 10)**
+
+last length : 3
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 4)]
+Input stack: ['declaration_statement', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5)]
+Input stack: ['iostmt', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5), ('iostmt', 23)]
+Input stack: ['read', 'identifier', ';', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5), ('iostmt', 23)]
+Input stack: ['read', 'identifier', ';', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5), ('iostmt', 24)]
+Input stack: ['write', 'identifier', ';', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5), ('iostmt', 24)]
+Input stack: ['write', 'identifier', ';', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5), ('iostmt', 25)]
+Input stack: ['write', 'constant', ';', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5), ('iostmt', 25)]
+Input stack: ['write', 'constant', ';', 'statement_list', 'END']
+another try
+
+production : ('write$constant$;', 25)**
+
+last length : 3
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 5)]
+Input stack: ['iostmt', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 6)]
+Input stack: ['if_statement', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 6), ('if_statement', 27)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 6), ('if_statement', 27)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 6), ('if_statement', 28)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'else', '{', 'statement_list', '}', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 6), ('if_statement', 28)]
+Input stack: ['if', 'condition', '{', 'statement_list', '}', 'else', '{', 'statement_list', '}', 'statement_list', 'END']
+another try
+
+production : ('if$condition${$statement_list$}$else${$statement_list$}', 28)**
+
+last length : 9
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 6)]
+Input stack: ['if_statement', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 7)]
+Input stack: ['assignment_statement', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 7), ('assignment_statement', 26)]
+Input stack: ['identifier', '=', 'expression', ';', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 7), ('assignment_statement', 26)]
+Input stack: ['identifier', '=', 'expression', ';', 'statement_list', 'END']
+another try
+
+production : ('identifier$=$expression$;', 26)**
+
+last length : 4
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 7)]
+Input stack: ['assignment_statement', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 8)]
+Input stack: ['while_statement', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 8), ('while_statement', 29)]
+Input stack: ['while', 'condition', '{', 'statement_list', '}', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 8), ('while_statement', 29)]
+Input stack: ['while', 'condition', '{', 'statement_list', '}', 'statement_list', 'END']
+another try
+
+production : ('while$condition${$statement_list$}', 29)**
+
+last length : 5
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 8)]
+Input stack: ['while_statement', 'statement_list', 'END']
+another try
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 9)]
+Input stack: ['for_statement', 'statement_list', 'END']
+expand
+
+--------------
+State: q Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 9), ('for_statement', 30)]
+Input stack: ['for', 'for_header', '{', 'statement_list', '}', 'statement_list', 'END']
+momentary insuccess
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 9), ('for_statement', 30)]
+Input stack: ['for', 'for_header', '{', 'statement_list', '}', 'statement_list', 'END']
+another try
+
+production : ('for$for_header${$statement_list$}', 30)**
+
+last length : 5
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3), ('statement', 9)]
+Input stack: ['for_statement', 'statement_list', 'END']
+another try
+
+production : ('for_statement', 9)**
+
+last length : 1
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN', ('statement_list', 3)]
+Input stack: ['statement', 'statement_list', 'END']
+another try
+
+production : ('statement$statement_list', 3)**
+
+last length : 2
+
+--------------
+State: b Index: 1
+Working stack: [('program', 1), 'BEGIN']
+Input stack: ['statement_list', 'END']
+back
+
+--------------
+State: b Index: 0
+Working stack: [('program', 1)]
+Input stack: ['BEGIN', 'statement_list', 'END']
+another try

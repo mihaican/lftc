@@ -1,0 +1,6 @@
+N = S, A
+E = a, b
+S = S
+P =
+S -> a$A
+A -> a$A | b$A | a | b
